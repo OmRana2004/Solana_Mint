@@ -1,6 +1,7 @@
-import { TokenLaunchpad } from "./components/TokenLaunchpad"
+import { Buffer } from "buffer"; // ✅ keep at the top
+import { TokenLaunchpad } from "./components/TokenLaunchpad";
 
-   // Wallet Adaper Imports
+// Wallet Adapter Imports
 import {
     ConnectionProvider,
     WalletProvider,
@@ -12,7 +13,10 @@ import {
 } from "@solana/wallet-adapter-react-ui";
 
 import { useMemo } from "react";
-import "@solana/wallet-adapter-react-ui/styles.css"
+import "@solana/wallet-adapter-react-ui/styles.css";
+
+// Set Buffer globally AFTER imports
+window.Buffer = Buffer;
 
 function App() {
     const wallets = useMemo(() => [], []); // No wallet adapter defined explicitly
@@ -22,11 +26,12 @@ function App() {
             <WalletProvider wallets={wallets} autoConnect>
                 <WalletModalProvider>
                     <div 
-                    style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        padding: 20,
-                    }}>
+                        style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            padding: 20,
+                        }}
+                    >
                         <WalletMultiButton />
                         <WalletDisconnectButton />
                     </div>
@@ -34,7 +39,7 @@ function App() {
                 </WalletModalProvider>
             </WalletProvider>
         </ConnectionProvider>
-    )
+    );
 }
 
 export default App;
