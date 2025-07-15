@@ -1,5 +1,5 @@
-export function LaunchpadForm ({
-    name,
+export function LaunchpadForm({
+  name,
   setName,
   symbol,
   setSymbol,
@@ -9,11 +9,11 @@ export function LaunchpadForm ({
   setInitialSupply,
   createToken,
 }) {
-    return (
-        <div className="h-screen flex flex-col justify-center items-center bg-gray-100 p-6">
-            <h1 className="text-3xl font-bold mb-6"> Solana Token Launchpad</h1>
+  return (
+    <div className="h-screen flex flex-col justify-center items-center bg-gray-100 p-6">
+      <h1 className="text-3xl font-bold mb-6"> Solana Token Launchpad</h1>
 
-         <input
+      <input
         className="w-80 p-2 mb-4 border border-gray-300 rounded"
         type="text"
         placeholder="Token Name"
@@ -29,7 +29,7 @@ export function LaunchpadForm ({
         onChange={(e) => setSymbol(e.target.value)}
       />
 
-        <input
+      <input
         className="w-80 p-2 mb-4 border border-gray-300 rounded"
         type="text"
         placeholder="Image URL (optional)"
@@ -45,12 +45,12 @@ export function LaunchpadForm ({
         onChange={(e) => setInitialSupply(e.target.value)}
       />
 
-      <button onClick={createToken}
-        className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition duration-300">
-            Create Token
-        </button>
-        </div>
-    );
+      <button
+        onClick={createToken}
+        className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition duration-300"
+      >
+        Create Token
+      </button>
+    </div>
+  );
 }
-
-export default LaunchpadForm;
