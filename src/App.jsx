@@ -1,4 +1,4 @@
-import { Buffer } from "buffer"; // ✅ keep at the top
+import { Buffer } from "buffer"; 
 import { TokenLaunchpad } from "./components/TokenLaunchpad";
 
 // Wallet Adapter Imports
@@ -37,7 +37,7 @@ function App() {
             {/* Wallet Button Bar */}
             <header className="flex justify-between items-center p-4 border-b border-gray-800 bg-gray-900 bg-opacity-70 backdrop-blur-md shadow-md">
               <h1 className="text-xl font-semibold text-cyan-400">
-                 Solana_Mint
+                 Solana Token Launchpad
               </h1>
               <div className="flex gap-2">
                 <WalletMultiButton className="!bg-cyan-600 hover:!bg-cyan-700 transition" />
