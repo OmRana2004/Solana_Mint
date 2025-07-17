@@ -62,5 +62,3 @@ export function LaunchpadForm({
     </div>
   );
 }
-
-// come on you can do it
